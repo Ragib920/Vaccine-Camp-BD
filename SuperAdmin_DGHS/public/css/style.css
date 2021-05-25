@@ -1,0 +1,235 @@
+*{
+    padding: 0px;
+    margin: 0px;
+} 
+a,a:hover,a:focus{
+    text-decoration: none;
+}
+ul,ol,li{
+    list-style-type: none;
+}
+body{
+  background-color: #F9FAFB;
+}
+/* ============================
+         Navbar 
+============================ */
+.warper .navbar{
+   height: 68px;
+   /* background-image: linear-gradient(to right,#FFFFFF,  #2A3F54);
+    */
+    background-color: #2A3F54;
+
+}
+.warper .navbar .logo a{
+  color: rgb(255, 255, 255);
+  padding-right: 40px;
+  font-weight: 700;
+  font-size: 22px;
+  font-family: 'Marck Script', cursive;
+}
+
+.warper .navbar .user-name a{
+   color: rgb(255, 255, 255);
+   padding-right: 40px;
+   font-weight: 700;
+   font-size: 18px;
+}
+.warper .navbar .user-name i{
+   padding-right: 7px;
+   font-size: 20px;
+}
+
+
+
+/* ============================
+         sideBar 
+============================ */
+.warper .left-panel .sidebar {
+   width: 280px;
+   background-color: #2A3F54;
+   /* background-color: rgb(252, 135, 114); */
+   position: fixed;
+   height: 100%;
+   overflow: auto;
+
+ }
+ .warper .left-panel .sidebar .row .text{
+   color: white;
+  
+   padding-top: 10px;
+ }
+
+ .warper .left-panel .sidebar .row img{
+   height: 70px;
+   width: 70px;
+   border-radius: 40px;
+ }
+ 
+ .warper .left-panel .sidebar .nav .color-li:hover{
+   background-image: linear-gradient(#2A3F54,#022d64,  #2A3F54);
+ }
+
+ .warper .left-panel .sidebar .nav .color-li a{
+  font-weight: 600;
+}  
+
+ .warper .left-panel .sidebar .nav i{
+   padding-right: 10px;
+   font-size: 20px;
+ }
+ .warper .left-panel .sidebar .nav .green{
+   color: rgb(65, 226, 25);
+ }
+ .warper .left-panel .sidebar .nav .blue{
+   color: rgb(25, 162, 226);
+ }
+ .warper .left-panel .sidebar .nav .red{
+   color: rgb(218, 28, 28);
+ }
+ .warper .left-panel .sidebar .nav .yellow{
+   color: rgb(249, 253, 17);
+ }
+ .warper .left-panel .sidebar .nav .tomato{
+   color:tomato;
+ }
+
+/* ============================
+         Right panel 
+============================ */
+section.right-panel {
+   margin-top: 68px;
+   margin-left: 280px;
+   height: auto;
+   padding: 20px;
+ }
+/* ============================
+         child registration page
+============================ */
+.right-panel .registration-form{
+  padding-top: 30px;
+}
+
+.right-panel .registration-form .form-header{
+  text-align: center;
+}
+/* ============================
+         Search child profile page
+============================ */
+
+.right-panel .Search-panel{
+  padding-top: 30px;
+}
+
+/* ============================
+     login page
+============================ */
+ .container .login-page{
+  margin-top: 60px;
+}
+/* .container .login-page .img{
+ padding: 30px;
+} */
+.container .login-page .img img{
+  height: 370px;
+}
+.container .login-page .button-width{
+  width: 100%;
+}
+/* ============================
+     registration  page
+============================ */
+.container .registration{
+  margin-top: 20px;
+}
+.container .registration h3{
+ margin-top: 20px;
+ margin-bottom: 20px;
+ text-align: center;
+}
+.container .registration .img {
+  padding-top: 130px;
+  text-align: center;
+}
+.container .registration .img img{
+  height: 200px;
+  width: 330px;
+}
+.container .registration .right-panel {
+  padding-top: 50px;
+}
+/* ============================
+     profile  page
+============================ */
+.container .my-profile .img{
+  padding-top: 30px;
+}
+.container .my-profile .label{
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.container .my-profile .label-data{
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  color: #3287db;
+}
+/* ============================
+     edit profile  page
+============================ */
+.container .edit-profile{
+  margin-top: 20px;
+}
+
+/* ============================
+     Add new vaccine  page
+============================ */
+.container .add-vaccine .content{
+  padding-bottom: 100px;
+}
+/* =====================================Dashboard DGHS============================= */
+
+
+/* =========card========== */
+.right-panel .dashboard .d-card{ 
+  padding: 10px;
+  border-radius: 7px;
+  margin: 1px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.right-panel .dashboard .d-card i{ 
+  font-size: 50px;
+  color: #F9FAFB;
+
+}
+.right-panel .dashboard .d-card i:hover{ 
+  -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+}
+.right-panel .dashboard .d-card .card-head{ 
+  font-weight: 600;
+  color: rgb(245, 245, 245);
+  text-align: center;
+}
+.right-panel .dashboard .d-card .card-body{ 
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.right-panel .dashboard .d-card .card-link{ 
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+.right-panel .dashboard .d-card .card-link a{ 
+  color: #F9FAFB;
+}
+.right-panel .dashboard .d-card .card-link a:hover{ 
+  color: #000000;
+}
+/* ======= */
+

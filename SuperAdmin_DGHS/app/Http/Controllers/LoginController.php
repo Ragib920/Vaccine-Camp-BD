@@ -1,0 +1,50 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\SuperAdminModel;
+
+class LoginController extends Controller
+{
+    function onLogout(Request $request){
+        $request->session()->flush();
+        return redirect('/admin/login');
+    }
+
+
+    function onLogin(Request $request){
+       $employee_id= $request->input('employee_id');
+       $password= $request->input('password');
+       $countValue=SuperAdminModel::where('employee_id','=',$employee_id)->where('password','=',$password)->count();
+
+        if($countValue==1){
+            $request->session()->put('employee_id',$employee_id);                                                                                                                                                                                                                                                                                                              
+            return 1;
+        }
+        else{
+            return 0;
+        }
+
+    }
+
+
+    function changePassword(Request $request){
+        $id= $request->input('id');
+        $old_password= $request->input('old_password');
+        $countValue=SuperAdminModel::where('id','=',$id)->where('password','=',$old_password)->count();
+ 
+         if($countValue==1){
+            $healthAssistant= SuperAdminModel::find($request->id);
+            $healthAssistant->password=$request->password;
+            $healthAssistant->save();
+            return back()->with('/admin/my_profile','Password Succrssfully Changed');
+         }
+         else{
+            return back()->with('/admin/my_profile','Old password dose not match');
+         }
+     }
+
+
+
+}
