@@ -1,0 +1,183 @@
+*{
+    padding: 0px;
+    margin: 0px;
+} 
+a,a:hover,a:focus{
+    text-decoration: none;
+}
+ul,ol,li{
+    list-style-type: none;
+}
+body{
+  background-color: #F9FAFB;
+}
+/* ============================
+         Navbar 
+============================ */
+.warper .navbar{
+   height: 68px;
+   /* background-image: linear-gradient(to right,#FFFFFF,  #2A3F54);
+    */
+   background-color: #2A3F54;
+
+}
+.warper .navbar .logo a{
+  color: rgb(255, 255, 255);
+  padding-right: 40px;
+  font-weight: 700;
+  font-size: 22px;
+  font-family: 'Marck Script', cursive;
+}
+.warper .navbar img{
+   height: 50px;
+}
+.warper .navbar .user-name a{
+   color: rgb(255, 255, 255);
+   padding-right: 40px;
+   font-weight: 700;
+   font-size: 18px;
+}
+.warper .navbar .user-name i{
+   padding-right: 7px;
+   font-size: 20px;
+}
+
+
+
+/* ============================
+         sideBar 
+============================ */
+.warper .left-panel .sidebar {
+   width: 280px;
+   background-color: #2A3F54;
+   position: fixed;
+   height: 100%;
+   overflow: auto;
+ }
+
+
+ .warper .left-panel .sidebar .row .text{
+   color: white;
+   padding-top: 10px;
+ }
+ 
+ .warper .left-panel .sidebar .row img{
+   height: 70px;
+   width: 70px;
+   border-radius: 40px;
+ }
+ .warper .left-panel .sidebar .nav .color-li:hover{
+   background-image: linear-gradient(#2A3F54,#022d64,  #2A3F54);
+ }
+ .warper .left-panel .sidebar .nav i{
+   padding-right: 10px;
+ }
+ .warper .left-panel .sidebar .nav .green{
+   color: rgb(65, 226, 25);
+ }
+ .warper .left-panel .sidebar .nav .blue{
+   color: rgb(25, 162, 226);
+ }
+ .warper .left-panel .sidebar .nav .red{
+   color: rgb(218, 28, 28);
+ }
+ .warper .left-panel .sidebar .nav .yellow{
+   color: rgb(249, 253, 17);
+ }
+ .warper .left-panel .sidebar .nav .tomato{
+   color:tomato;
+ }
+
+/* ============================
+         Right panel 
+============================ */
+section.right-panel {
+   margin-top: 68px;
+   margin-left: 280px;
+   height: auto;
+   padding: 25px;
+ }
+/* ============================
+         child registration page
+============================ */
+.right-panel .registration-form{
+  padding-top: 30px;
+}
+
+.right-panel .registration-form .form-header{
+  text-align: center;
+}
+/* ============================
+         Search child profile page
+============================ */
+
+.right-panel .Search-panel{
+  padding-top: 30px;
+}
+
+/* ============================
+     login page
+============================ */
+ .container .login-page{
+  margin-top: 60px;
+}
+/* .container .login-page .img{
+ padding: 30px;
+} */
+.container .login-page .img img{
+  height: 370px;
+}
+.container .login-page .button-width{
+  width: 100%;
+}
+/* ============================
+     registration  page
+============================ */
+.container .registration{
+  margin-top: 20px;
+}
+.container .registration h3{
+ margin-top: 20px;
+ margin-bottom: 20px;
+ text-align: center;
+}
+.container .registration .img {
+  padding-top: 130px;
+  text-align: center;
+}
+.container .registration .img img{
+  height: 200px;
+  width: 330px;
+}
+.container .registration .right-panel {
+  padding-top: 50px;
+}
+/* ============================
+     profile  page
+============================ */
+.container .my-profile .img{
+  padding-top: 30px;
+}
+.container .my-profile .label{
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.container .my-profile .label-data{
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  color: #3287db;
+}
+/* ============================
+     edit profile  page
+============================ */
+.container .edit-profile{
+  margin-top: 20px;
+}
+/* ============================
+     search child profile  page
+============================ */
+
+
+
