@@ -59,7 +59,19 @@ class HomeController extends Controller
         return view('edit_profile');
     }
 
-   
+    function manage_notice_view()
+    {
+        return view('notice_list');
+    }
+    function create_notice()
+    {
+        return view('create_notice');
+    }
+    function update_notice_view()
+    {
+        return view('update_notice');
+    }
+  
     // =============
     function SuperAdminregistration(Request $request)
     {

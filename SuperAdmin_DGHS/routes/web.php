@@ -51,6 +51,27 @@ Route::get('/edit_profile','HomeController@edit_profile_view')->middleware('logi
 Route::get('/edit_profile/{id}','HomeController@view_list_data')->middleware('loginCheck');
 
 Route::post('/edit_profile','HomeController@SuperAdminUpdate')->middleware('loginCheck');
+// ===================Manage Notice===================
+Route::get('/notice_list','HomeController@manage_notice_view')->middleware('loginCheck');
+
+Route::get('/create_notice','HomeController@create_notice')->middleware('loginCheck');
+
+Route::post('/create_notice','NoticeController@create_new_notice')->middleware('loginCheck');
+
+Route::get('/notice_list','NoticeController@show_notice_list')->middleware('loginCheck');
+
+Route::get('/deleteNotice/{id}','NoticeController@delete_notice')->middleware('loginCheck');
+
+Route::get('/update_notice','HomeController@update_notice_view')->middleware('loginCheck');
+
+Route::get('/update_notice/{id}','NoticeController@notice_data')->middleware('loginCheck');
+
+Route::Post('/update_notice','NoticeController@update_notice')->middleware('loginCheck');
+
+Route::get('/notice_view/{id}','NoticeController@notice_view')->middleware('loginCheck');
+
+
+
 
 });
 

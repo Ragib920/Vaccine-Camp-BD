@@ -21,7 +21,7 @@ class VaccineController extends Controller
        $vaccine->starting_time= $request->starting_time;
        $vaccine->rule_of_administration= $request->rule_of_administration;
        $vaccine->save();
-       return back()->with('add_category','Vaccine record succesfully Created');
+       return back()->with('/admin/add_category','Vaccine record succesfully Created');
     }
 
     public function show_vaccine_list()

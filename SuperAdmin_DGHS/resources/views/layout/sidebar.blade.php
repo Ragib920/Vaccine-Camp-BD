@@ -25,7 +25,7 @@
                 </a>
             </li>
             <li class="color-li">
-              <a class="nav-link text-white " href="{{ '/admin/vaccine_details' }}">
+              <a class="nav-link text-white " href="{{ '/admin/notice_list' }}">
                 <i class="fas fa-flag-checkered text-warning"></i>
                 Manage Notice
               </a>

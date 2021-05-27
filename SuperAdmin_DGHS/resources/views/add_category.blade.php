@@ -1,7 +1,6 @@
 @extends('layout.app')
 @section('title','Add New Category')
 
-</section>
 
 @section('content')
 <section class="right-panel">
