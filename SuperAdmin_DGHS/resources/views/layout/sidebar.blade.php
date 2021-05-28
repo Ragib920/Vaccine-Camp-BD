@@ -31,7 +31,7 @@
               </a>
           </li>
           <li class="color-li">
-            <a class="nav-link text-white " href="{{ '/admin/vaccine_details' }}">
+            <a class="nav-link text-white " href="{{ '/admin/manage_employee' }}">
               <i class="fas fa-users text-secondary"></i>
               Manage Employee
             </a>

@@ -65,7 +65,7 @@
                 <div class="row d-card bg-warning">
                     <div class="row">
                         <div class="card-head">
-                             Divisional Directoe
+                             Divisional Director
                         </div>
                     </div>
                     <div class="col-md-5">
@@ -80,7 +80,7 @@
                     </div>
                     <div class="row">
                          <div class="card-link">
-                            <a class="" style="height: 20px;"  href="">View Details</a>
+                            <a class="" style="height: 20px;"  href="{{ "/admin/divisional_director_list" }}">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                     </div>
                     <div class="row">
                          <div class="card-link">
-                            <a class="" style="height: 20px;"  href="">View Details</a>
+                            <a class="" style="height: 20px;"  href="{{ "/admin/health_inspector_list" }}">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
                     </div>
                     <div class="row">
                          <div class="card-link">
-                            <a class="" style="height: 20px;"  href="">View Details</a>
+                            <a class="" style="height: 20px;"  href="{{ "/admin/super_intendent_list" }}">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
                     </div>
                     <div class="row">
                          <div class="card-link">
-                            <a class="" style="height: 20px;"  href="">View Details</a>
+                            <a class="" style="height: 20px;"  href="{{ "/admin/health_assistant_list" }}">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -159,10 +159,11 @@
         </div>
         <hr>
         <p>Dashboard /Statistics</p> <hr>
+
+        <h5>Vaccine Wise Statistics Report</h5>
         <div class="statictics">
             <div class="row">
                
-              
             </div>
             <div class="" align="right" style="margin-top:40px;">
                 <div id="chartContainer" style="height: 370px; width: 100%;"></div>
@@ -186,13 +187,13 @@ window.onload = function vaccinewise()
   var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	title: {
-		text: "Vaccine"
+		text: ""
 	},
 	subtitles: [{
 		text: " "
 	}],
 	data: [{
-	    type:"pie", //"column",  type: "pie",
+	    type:"column", //"column",  type: "pie",
 		yValueFormatString: "#,##0.\"\"",
 		indexLabel: "{label} ({y})",
 		dataPoints: <?php echo json_encode($data, JSON_NUMERIC_CHECK); ?>

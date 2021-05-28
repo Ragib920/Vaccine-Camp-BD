@@ -71,8 +71,29 @@ class HomeController extends Controller
     {
         return view('update_notice');
     }
-  
-    // =============
+    function manage_employee_view()
+    {
+        return view('manage_employee');
+    }
+    function health_assistant_list_view()
+    {
+        return view('health_assistant_list');
+    }
+    function super_intendent_list_view()
+    {
+        return view('super_intendent_list');
+    }
+
+    function health_inspector_list_view()
+    {
+        return view('health_inspector_list');
+    }
+
+    function divitional_director_list_view()
+    {
+        return view('divitional_director_list');
+    }
+    // =======Ssuper admin registration update profile======
     function SuperAdminregistration(Request $request)
     {
         $admin = new SuperAdminModel();
@@ -106,7 +127,7 @@ class HomeController extends Controller
         $admin->Save();
         return back()->with('/admin/edit_profile','Successfully Updated');
     }
-
+// ===========Super Admin Dashboard Data==========
     function dashboard_data()
     {
         $count_vaccine=VaccineModel::count();
@@ -129,7 +150,70 @@ class HomeController extends Controller
 
         return view('dashboard',compact('count_vaccine','count_ha','count_child','data'));
     }
+    // ===========Manage Employee==========
+    public function search_employee(Request $request)
+    { 
+        $employee_id=$request->input('employee_id');
 
+        $result = UsersModel::query()
+            ->where('employee_id',"{$employee_id}")
+            ->get();
+            return view('manage_employee', compact('result'));
+    }
 
+    public function delete_employee($id)
+    {
+        UsersModel::where('id',$id)->delete();
+        return back()->with('/admin/manage_employee');
+    }
+
+    // ===========Health Assistant==========
+    public function show_health_assistant_list()
+    {
+        $result= UsersModel::orderBy('id', 'desc')->where('role',"Health_Asistant")->paginate(15);
+        return view('health_assistant_list',compact('result'));
+    }
+
+    public function delete_health_assistant($id)
+    {
+        UsersModel::where('id',$id)->delete();
+        return back()->with('/admin/health_assistant_list','succesfully deleted');
+    }
+
+    // ===========Super Intendent==========
+    public function show_super_intendent_list()
+    {
+        $result= UsersModel::orderBy('id', 'desc')->where('role',"Super_Intendent")->paginate(15);
+        return view('super_intendent_list',compact('result'));
+    }
+    public function delete_super_intendent($id)
+    {
+        UsersModel::where('id',$id)->delete();
+        return back()->with('/admin/super_intendent_list','succesfully deleted');
+    }
+
+    // ===========Health Inspector==========
+    public function show_health_inspector_list()
+    {
+        $result= UsersModel::orderBy('id', 'desc')->where('role',"Health_Inspector")->paginate(15);
+        return view('health_inspector_list',compact('result'));
+    }
+    public function delete_health_inspector($id)
+    {
+        UsersModel::where('id',$id)->delete();
+        return back()->with('/admin/health_inspector_list','succesfully deleted');
+    }
+
+    // ===========Divisional Director==========
+    public function show_divisional_director_list()
+    {
+        $result= UsersModel::orderBy('id', 'desc')->where('role',"Divisional_Director")->paginate(15);
+        return view('divisional_director_list',compact('result'));
+    }
+    public function delete_divisional_director($id)
+    {
+        UsersModel::where('id',$id)->delete();
+        return back()->with('/admin/divisional_director_list','succesfully deleted');
+    }
 
 }

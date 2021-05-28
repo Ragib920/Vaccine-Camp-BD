@@ -70,6 +70,40 @@ Route::Post('/update_notice','NoticeController@update_notice')->middleware('logi
 
 Route::get('/notice_view/{id}','NoticeController@notice_view')->middleware('loginCheck');
 
+// ==========================Manage Employee==============================
+Route::get('/manage_employee','HomeController@manage_employee_view')->middleware('loginCheck');
+
+Route::get('/manage_employee','HomeController@search_employee')->middleware('loginCheck');
+
+Route::get('/deleteEmployee/{id}','HomeController@delete_employee')->middleware('loginCheck');
+
+// =========Health Assistant========
+Route::get('/health_assistant_list','HomeController@health_assistant_list_view')->middleware('loginCheck');
+
+Route::get('/health_assistant_list','HomeController@show_health_assistant_list')->middleware('loginCheck');
+
+Route::get('/deleteHA/{id}','HomeController@delete_health_assistant')->middleware('loginCheck');
+
+// =========Super Intendent========
+Route::get('/super_intendent_list','HomeController@super_intendent_list_view')->middleware('loginCheck');
+
+Route::get('/super_intendent_list','HomeController@show_super_intendent_list')->middleware('loginCheck');
+
+Route::get('/deleteSI/{id}','HomeController@delete_super_intendent')->middleware('loginCheck');
+
+// =========Health Inspector========
+Route::get('/health_inspector_list','HomeController@health_inspector_list_view')->middleware('loginCheck');
+
+Route::get('/health_inspector_list','HomeController@show_health_inspector_list')->middleware('loginCheck');
+
+Route::get('/deleteHI/{id}','HomeController@delete_health_inspector')->middleware('loginCheck');
+
+// =========Divisional Director========
+Route::get('/divisional_director_list','HomeController@divisional_director_list_view')->middleware('loginCheck');
+
+Route::get('/divisional_director_list','HomeController@show_divisional_director_list')->middleware('loginCheck');
+
+Route::get('//deleteDI/{id}','HomeController@delete_divisional_director')->middleware('loginCheck');
 
 
 
