@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title','Manage Notice')
+@section('title','Notice')
 
 
 @section('content')
@@ -7,11 +7,9 @@
 
 <section class="right-panel ">   
     <div class="container">
-        <p>Super Admin / Manage Notice / Notice List</p> <hr>
-        <div class="add_category pt-2">
-            <a href="{{ '/admin/create_notice' }}" class="btn btn-info"><i class="fas fa-folder-plus pe-3"></i>Create New Notice</a>
-        </div>    
-        <div class="vaccine pt-5 pb-5">
+        <p>Health Inspector / Notice List</p> <hr>
+          
+        <div class="vaccine pt-2 pb-5">
             @if(Session::has('/admin/notice_list'))
                 <div class="alert alert-success text-center" role="alert">
                     {{Session::get('/admin/notice_list')}}
@@ -30,12 +28,10 @@
                 <tbody>
                     @foreach ($result as $notice)
                     <tr>
-                        <th colspan="2">{{ $notice->notice_title }}</th>
+                        <th colspan="2"> <a class="text-dark" href="/upazilla/notice_view/{{ $notice->id }}">{{ $notice->notice_title }}</a> </th>
                         <td > <p class="text-success" style="font-size:12px;">{{ $notice->created_at }}</p></td>
                         <td>
-                            <a class="btn btn-success" href="/admin/notice_view/{{ $notice->id }}"  ><i class="fas fa-eye"></i></a>
-                            <a class="btn btn-warning" href="/admin/update_notice/{{ $notice->id }}"><i class="fas fa-pen-square"></i></a>
-                            <a class="btn btn-danger" href="/admin/deleteNotice/{{ $notice->id }}"><i class="fas fa-trash-alt"></i></a>
+                            <a class="btn btn-success" href="/upazilla/notice_view/{{ $notice->id }}"  ><i class="fas fa-eye"></i></a>
                         </td>                
                     </tr>
                     
