@@ -21,7 +21,7 @@
                     <div class="col-md-6">
                         <div class="form_body">
 
-                            <input  id="role" value="Super_Intendent" type="hidden" class="form-control" required >
+                            <input  id="role" value="Health_Inspector" type="hidden" class="form-control" required >
 
                             <div class="form-group mt-3">
                                 <label >Name</label>

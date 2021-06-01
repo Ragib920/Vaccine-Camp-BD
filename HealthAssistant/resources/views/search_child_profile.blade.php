@@ -283,6 +283,7 @@
         <div class="alert alert-danger" role="alert">
           <h6 class="text-center">No Result Found!</h6>
         </div>
+        <div style="height: 250px"></div>
         @endif
     </div>
     <!-- ===================================================== -->

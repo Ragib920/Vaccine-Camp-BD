@@ -17,7 +17,7 @@ class LoginController extends Controller
     function onLogin(Request $request){
        $employee_id= $request->input('employee_id');
        $password= $request->input('password');
-       $countValue=UsersModel::where('employee_id','=',$employee_id)->where('password','=',$password)->where('role','=',"Super_Intendent")->count();
+       $countValue=UsersModel::where('employee_id','=',$employee_id)->where('password','=',$password)->where('role','=',"Health_Inspector")->count();
 
         if($countValue==1){
             $request->session()->put('employee_id',$employee_id);                                                                                                                                                                                                                                                                                                              

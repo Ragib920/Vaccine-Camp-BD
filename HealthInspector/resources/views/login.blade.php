@@ -4,32 +4,35 @@
 
 @section('content')
 <div class="container ">
-    <section class="login-page clearfix shadow-lg p-3 mb-5 bg-body rounded">
-        <h4 class="mt-5 mb-5  d-flex justify-content-center">Health Inspector Login Panel</h4>
-        <div class="col-md-5 float-start img">
-            <img src="../images/health assistant.png" alt=""> 
-        </div>
-        <div class="col-md-7 float-start pe-5 ps-5 mt-5">
-            <form class="loginForm">
-                <div class="form-group">
-                    <label  class="form-label">Employee ID:</label>
-                    <input required=" " name="employee_id" value="" type="text"  class="form-control">
-                </div>
-                <div class="form-group mt-3">
-                    <label  class="form-label">Password:</label>
-                    <input required="" name="password" value="" type="password" name="password" class="form-control">
-                </div>
-                <div class="row mt-3">
-                    <div class="form-group col-md-6 pe-3 ps-3">
-                        <button  name="submit" type="submit" class="btn btn-success button-width" href="">Login</button>
+    <section class="login-page clearfix ">
+       <div class="row">
+            <div class="col-md-3 float-start img">
+            </div>
+            <div class="col-md-6 shadow-lg p-3 mb-5 bg-body rounded pe-5 ps-5 mt-5">
+                <h4 class="pt-3 mb-5  d-flex justify-content-center">Health Inspector Login Panel</h4>
+                <form class="loginForm">
+                    <div class="form-group">
+                        <label  class="form-label">Employee ID:</label>
+                        <input required=" " name="employee_id" value="" type="text"  class="form-control">
                     </div>
-                    <div class="form-group col-md-6 pe-3 ps-3">
-                        <a  class="btn btn-danger button-width" href="{{ '/upazilla/registration' }}">Registration</a>
+                    <div class="form-group mt-3">
+                        <label  class="form-label">Password:</label>
+                        <input required="" name="password" value="" type="password" name="password" class="form-control">
                     </div>
-                 
-                </div>
-            </form>  
-        </div>
+                    <div class="row mt-4 mb-4">
+                        <div class="form-group col-md-6 pe-3 ps-3">
+                            <button  name="submit" type="submit" class="btn btn-success button-width" href="">Login</button>
+                        </div>
+                        <div class="form-group col-md-6 pe-3 ps-3">
+                            <a  class="btn btn-danger button-width" href="{{ '/upazilla/registration' }}">Registration</a>
+                        </div>
+                    
+                    </div>
+                </form>  
+            </div>
+            <div class="col-md-3 float-start img">
+            </div>
+       </div>
     </section>
 </div>
 @endsection

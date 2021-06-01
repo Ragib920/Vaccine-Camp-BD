@@ -89,7 +89,7 @@
                 <div class="row d-card bg-primary">
                     <div class="row">
                         <div class="card-head">
-                            Total Health Inspector
+                            Total Super Intendent
                         </div>
                     </div>
                     <div class="col-md-5">
@@ -99,7 +99,7 @@
                     </div>
                     <div class="col-md-7">
                         <div class="card-body">
-                           0
+                           {{ $count_SI }}
                         </div>
                     </div>
                     <div class="row">
@@ -113,7 +113,8 @@
                 <div class="row d-card bg-success">
                     <div class="row">
                         <div class="card-head">
-                            Total Super Intendent
+                            Total Health Inspector
+                            
                         </div>
                     </div>
                     <div class="col-md-5">
@@ -123,7 +124,7 @@
                     </div>
                     <div class="col-md-7">
                         <div class="card-body">
-                           0
+                           {{ $count_HI }}
                         </div>
                     </div>
                     <div class="row">
