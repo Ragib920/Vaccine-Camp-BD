@@ -9,6 +9,18 @@ Route::get('/','HomeController@dashboard_view')->middleware('loginCheck');
 
 Route::get('/','HomeController@dashboard_data')->middleware('loginCheck');
 
+// ===================statistics===================
+Route::get('/division_statistics','Statistics_Controller@division_statistics_view')->middleware('loginCheck');
+
+Route::get('/division_statistics','Statistics_Controller@division_statistics_data')->middleware('loginCheck');
+
+Route::get('/district_statistics','Statistics_Controller@district_statistics_view')->middleware('loginCheck');
+
+Route::get('/district_statistics','Statistics_Controller@district_statistics_data')->middleware('loginCheck');
+
+Route::get('/upazilla_statistics','Statistics_Controller@upazilla_statistics_view')->middleware('loginCheck');
+
+Route::get('/upazilla_statistics','Statistics_Controller@upazilla_statistics_data')->middleware('loginCheck');
 
 // ===================Registration===================
 Route::get('/registration','HomeController@registration_view');

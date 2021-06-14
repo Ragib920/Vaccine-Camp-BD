@@ -64,10 +64,14 @@
         </div> 
         @endforeach
         @else 
-            <div class="alert alert-danger" role="alert">
-                <h6 class="text-center">No Result Found!</h6>
+            <div class="row">
+                <div class="col-md-4"></div>            
+                <div class="alert alert-danger d-flex justify-content-center col-md-4" role="alert">
+                    <h6 class="text-center">No Result Found!</h6>
+                </div>
+                <div class="col-md-4"></div>
             </div>
-            <div style="height: 250px">
+            <div style="height: 150px">
 
             </div>
         @endif
