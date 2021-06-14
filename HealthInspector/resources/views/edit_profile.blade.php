@@ -79,8 +79,8 @@
     
     
                             <div class="form-group mt-3">
-                                <label >Union </label>
-                                <input id="union" value="{{ $data->union }}" type="text" class="form-control" required>
+                                
+                                <input id="union" value="{{ $data->union }}" type="hidden" class="form-control" required>
                             </div>
     
     

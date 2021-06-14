@@ -1,5 +1,5 @@
 @extends('auth_layout.app')
-@section('title','Super Intendent login')
+@section('title','Health Inspector Login')
 
 
 @section('content')

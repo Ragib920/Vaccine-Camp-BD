@@ -10,13 +10,8 @@
         <p>Super Admin / Manage Employee / Health Inspector list</p> <hr>
 
         <div class="vaccine pt-5 pb-5">
-            @if(Session::has('/admin/health_inspector_list'))
-                <div class="alert alert-success text-center" role="alert">
-                    {{Session::get('/admin/health_inspector_list')}}
-                </div>
-            @endif
             <table class="table table-hover">
-                <thead class="table-warning">
+                <thead class="table-success">
                     <tr>
                         <th scope="col">Name:</th>
                         <th scope="col">Employee ID</th>
@@ -25,8 +20,6 @@
                         <th scope="col">Division</th>
                         <th scope="col">District</th>
                         <th scope="col">Upazilla</th>
-                        <th scope="col">Union</th>
-                        <th scope="col">Word</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -41,8 +34,6 @@
                         <td >{{ $ha->division }}</td>
                         <td >{{ $ha->district }}</td>
                         <td >{{ $ha->upazilla }}</td>
-                        <td >{{ $ha->union }}</td>
-                        <td >{{ $ha->word }}</td>
                         <td>
                             <a class="btn btn-danger" href="/admin/deleteSI/{{ $ha->id }}"><i class="fas fa-trash-alt"></i></a>
                         </td>                

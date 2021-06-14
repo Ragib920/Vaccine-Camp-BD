@@ -23,10 +23,6 @@
                         <th scope="col">Phone Number</th>
                         <th scope="col">Email</th>
                         <th scope="col">Division</th>
-                        <th scope="col">District</th>
-                        <th scope="col">Upazilla</th>
-                        <th scope="col">Union</th>
-                        <th scope="col">Word</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -39,10 +35,6 @@
                         <td >{{ $ha->phone_number }}</td>
                         <td >{{ $ha->email }}</td>
                         <td >{{ $ha->division }}</td>
-                        <td >{{ $ha->district }}</td>
-                        <td >{{ $ha->upazilla }}</td>
-                        <td >{{ $ha->union }}</td>
-                        <td >{{ $ha->word }}</td>
                         <td>
                             <a class="btn btn-danger" href="/admin/deleteDI/{{ $ha->id }}"><i class="fas fa-trash-alt"></i></a>
                         </td>                

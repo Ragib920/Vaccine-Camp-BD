@@ -10,13 +10,9 @@
         <p>Super Admin / Manage Employee / Health Assistant list</p> <hr>
 
         <div class="vaccine pt-5 pb-5">
-            @if(Session::has('/admin/health_assistant_list'))
-                <div class="alert alert-success text-center" role="alert">
-                    {{Session::get('/admin/health_assistant_list')}}
-                </div>
-            @endif
+          
             <table class="table table-hover">
-                <thead class="table-warning">
+                <thead class="table-danger">
                     <tr>
                         <th scope="col">Name:</th>
                         <th scope="col">Employee ID</th>

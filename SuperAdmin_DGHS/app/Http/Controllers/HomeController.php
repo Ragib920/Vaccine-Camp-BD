@@ -134,6 +134,7 @@ class HomeController extends Controller
         $count_ha=UsersModel::where('role','=','Health_Asistant')->count();
         $count_SI=UsersModel::where('role','=','Super_Intendent')->count();
         $count_HI=UsersModel::where('role','=','Health_Inspector')->count();
+        $count_DD=UsersModel::where('role','=','Divisional_Director')->count();
         $count_child=child_information_model::count();
 
      
@@ -150,7 +151,7 @@ class HomeController extends Controller
              ); 
          }
 
-        return view('dashboard',compact('count_vaccine','count_ha','count_child','data','count_SI','count_HI'));
+        return view('dashboard',compact('count_vaccine','count_ha','count_child','data','count_SI','count_HI','count_DD'));
     }
     // ===========Manage Employee==========
     public function search_employee(Request $request)

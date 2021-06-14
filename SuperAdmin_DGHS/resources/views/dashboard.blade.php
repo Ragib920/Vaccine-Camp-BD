@@ -75,7 +75,7 @@
                     </div>
                     <div class="col-md-7">
                         <div class="card-body">
-                           0
+                           {{ $count_DD }}
                         </div>
                     </div>
                     <div class="row">
@@ -104,7 +104,7 @@
                     </div>
                     <div class="row">
                          <div class="card-link">
-                            <a class="" style="height: 20px;"  href="{{ "/admin/health_inspector_list" }}">View Details</a>
+                            <a class="" style="height: 20px;"  href="{{ "/admin/super_intendent_list" }}">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                     </div>
                     <div class="row">
                          <div class="card-link">
-                            <a class="" style="height: 20px;"  href="{{ "/admin/super_intendent_list" }}">View Details</a>
+                            <a class="" style="height: 20px;"  href="{{ "/admin/health_inspector_list" }}">View Details</a>
                         </div>
                     </div>
                 </div>
