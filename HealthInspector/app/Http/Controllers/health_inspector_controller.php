@@ -8,6 +8,8 @@ use App\noticeModel;
 use App\child_information_model;
 use App\VaccinationRecordModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class health_inspector_controller extends Controller
 {
@@ -52,6 +54,11 @@ class health_inspector_controller extends Controller
     function search_health_assistant_view()
     {
         return view('search_health_assistant');
+    }
+
+    function report_view()
+    {
+        return view('report');
     }
 
     // =============My profile page==============
@@ -116,6 +123,20 @@ class health_inspector_controller extends Controller
         $count_vaccination = VaccinationRecordModel::where('employee_id',"{$employee_id}")->count();
     
         return view('search_health_assistant', compact('result','count_registerd_child','count_vaccination'));
+    }
+
+
+    public function report(Request $request)
+    {
+        $upazilla = UsersModel::where("employee_id",$request->session()->get("employee_id"))->get('upazilla');
+
+        $report =DB::table('vaccination_record')
+            ->leftJoin('users', 'vaccination_record.employee_id', '=' ,'users.employee_id')
+            ->select('vaccine_name', DB::raw('count(*) as total'))
+            ->groupBy('vaccine_name')
+            // ->where('upazilla',"{$upazilla}")
+            ->get();
+        return view('report',compact('report'));
     }
 
 

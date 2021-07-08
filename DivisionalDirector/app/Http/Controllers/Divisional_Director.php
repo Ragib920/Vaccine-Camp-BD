@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use App\UsersModel;
 use App\VaccineModel;
 use App\noticeModel;
@@ -16,7 +15,7 @@ class Divisional_Director extends Controller
     {
         return view('dashboard');
     }
-    
+
     function my_profile_view()
     {
         return view('my_profile');
@@ -68,7 +67,7 @@ class Divisional_Director extends Controller
 
         $result = UsersModel::where("employee_id",$request->session()->get("employee_id"))->get();
 
-        
+
         return view('/edit_profile',['divisionKey'=>$dividion,'districtKey'=>$district,'wordKey'=>$word_no,'dataKey'=>$result]);
     }
 
@@ -95,7 +94,7 @@ class Divisional_Director extends Controller
     }
 
     public function search_Health_assistant(Request $request)
-    { 
+    {
         $employee_id=$request->input('employee_id');
 
         $result = UsersModel::query()
@@ -104,7 +103,7 @@ class Divisional_Director extends Controller
             ->get();
         $count_registerd_child = child_information_model::where('employee_id',"{$employee_id}")->count();
         $count_vaccination = VaccinationRecordModel::where('employee_id',"{$employee_id}")->count();
-    
+
         return view('search_health_assistant', compact('result','count_registerd_child','count_vaccination'));
     }
 }

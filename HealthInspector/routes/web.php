@@ -38,7 +38,11 @@ Route::group(['prefix'=>'upazilla'],function(){
     Route::get('/search_health_assistant','health_inspector_controller@search_health_assistant_view')->middleware('loginCheck');
     Route::get('/search_health_assistant','health_inspector_controller@search_Health_assistant')->middleware('loginCheck');
 
+    // ======================Report==================
+    Route::get('/report','health_inspector_controller@report_view')->middleware('loginCheck');
+    Route::get('/report','health_inspector_controller@report')->middleware('loginCheck');
 
+    
 
 
 });

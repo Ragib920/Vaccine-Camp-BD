@@ -14,7 +14,7 @@
                     <input required=" " name="employee_id" value="" type="text"  class="form-control">
                 </div>
                 <div class="form-group mt-3">
-                    <label  class="form-label">Password:Password</label>
+                    <label  class="form-label">Password:</label>
                     <input required="" name="password" value="" type="password" name="password" class="form-control">
                 </div>
                 <div class="row mt-4 mb-4">

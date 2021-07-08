@@ -27,7 +27,7 @@
                 <a class="pe-3 text-warning" href="{{ '/upazilla/search_health_assistant' }}">Search Health Assistant</a>
             </div>
             <div class="d-flex">
-                <a class="pe-3 text-light" href="">Report</a>
+                <a class="pe-3 text-light" href="{{ '/upazilla/report' }}">Report</a>
             </div>
             <div class="d-flex">
                 <a class="pe-5 text-light" href="{{ "/upazilla/notice_list" }}">Notice</a>

@@ -1,14 +1,12 @@
 @extends('layout.app')
 @section('title','Notice')
 
-
 @section('content')
-    
 
-<section class="right-panel ">   
+<section class="right-panel ">
     <div class="container">
         <p>Divisional Director/ Notice List</p> <hr>
-          
+
         <div class="vaccine pt-2 pb-5">
             @if(Session::has('/admin/notice_list'))
                 <div class="alert alert-success text-center" role="alert">
@@ -18,13 +16,13 @@
             <table class="table table-hover">
                 <thead class="table-info">
                     <tr>
-                        <th scope="col">Notice Title</th>
+                        <th scope="col">notice title</th>
                         <th scope="col"></th>
                         <th></th>
-                        <th scope="col">Action</th>
+                        <th scope="col">action</th>
                     </tr>
                 </thead>
-                
+
                 <tbody>
                     @foreach ($result as $notice)
                     <tr>
@@ -32,19 +30,16 @@
                         <td > <p class="text-success" style="font-size:12px;">{{ $notice->created_at }}</p></td>
                         <td>
                             <a class="btn btn-success" href="/division/notice_view/{{ $notice->id }}"  ><i class="fas fa-eye"></i></a>
-                        </td>                
+                        </td>
                     </tr>
-                    
                     @endforeach
                 </tbody>
             </table>
             <div class="d-flex justify-content-center">
                 {!! $result->links() !!}
             </div>
-        </div>         
+        </div>
     </div>
-</section>     
-
-
+</section>
 
 @endsection

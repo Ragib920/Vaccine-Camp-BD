@@ -14,7 +14,7 @@
                         {{Session::get('/upazilla/edit_profile')}}
                     </div>
                  @endif 
-                <form>
+                 <form>
                     @foreach ($dataKey as $data)
                     <div class="row shadow-lg p-3 mb-5 bg-body rounded ">
                         <div class="col-md-6">
@@ -79,12 +79,14 @@
     
     
                             <div class="form-group mt-3">
-                                
+                               
                                 <input id="union" value="{{ $data->union }}" type="hidden" class="form-control" required>
                             </div>
     
     
-                                                             
+                             <div class="form-group mt-3">
+                                <input id="word" value="{{ $data->union }}" type="hidden" class="form-control" required>
+                            </div>                                 
                         </div>
                         <div class="form-group mt-3">
                             <div class="mt-4">
